@@ -12,7 +12,7 @@ function GalleryList ({photoGalleryItems, updateLikes}){
     return(
     <>
     <div className="galleryList">
-        <p>Testing from Gallery List</p>   
+        <p>Photo Gallery</p>   
         {photoGalleryItems.map(image =>
         {return (
         <GalleryItem 

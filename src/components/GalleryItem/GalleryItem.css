@@ -1,4 +1,19 @@
 .photoItem {
     border: 1px solid red;
-    max-width: 30vh;
+    max-width: 30vw;
+}
+
+.itemDescription {
+    border: 1px solid red;
+}
+
+.galleryItem {
+    max-width: 50vw;
+    border: 1px solid blueviolet;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-content: center;
 }

@@ -24,11 +24,11 @@ function App() {
     }
 
     const updateLikes = (id) => {
-    axios.put('/gallery/likes/id')
+    axios.put(`/gallery/like/${id}`)
     .then(response => {
-      setPhotoGalleryItems(response.data);
-    }).catch (err => {
-      console.log('Errors from GET', err);
+      getGalleryItems();
+    }).catch (error => {
+      console.log('Errors from GET response', error);
     })
     }
 
@@ -39,7 +39,7 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList photoGalleryItems={photoGalleryItems}/>
+        <GalleryList photoGalleryItems={photoGalleryItems} updateLikes={updateLikes}/>
       </div>
     );
 }

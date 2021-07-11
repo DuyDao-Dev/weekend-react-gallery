@@ -3,7 +3,7 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 
-function GalleryList ({photoGalleryItems}){
+function GalleryList ({photoGalleryItems, updateLikes}){
 
     
     // console.log(`What is galleryList doing`, photoGalleryItems);
@@ -17,7 +17,8 @@ function GalleryList ({photoGalleryItems}){
         {return (
         <GalleryItem 
             key={image.id} 
-            image={image} 
+            image={image}
+            updateLikes={updateLikes}
              />)})
         }
     </div>
@@ -28,4 +29,3 @@ function GalleryList ({photoGalleryItems}){
 export default GalleryList;
 
 
-// updateLikes={photoGalleryItems.updateLikes}

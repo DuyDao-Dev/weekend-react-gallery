@@ -23,6 +23,15 @@ function App() {
     })
     }
 
+    const updateLikes = (id) => {
+    axios.put('/gallery/likes/id')
+    .then(response => {
+      setPhotoGalleryItems(response.data);
+    }).catch (err => {
+      console.log('Errors from GET', err);
+    })
+    }
+
 
     return (
       <div className="App">
@@ -31,7 +40,6 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <GalleryList photoGalleryItems={photoGalleryItems}/>
-        {/* <GalleryItem/> */}
       </div>
     );
 }

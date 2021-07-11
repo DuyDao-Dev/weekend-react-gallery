@@ -1,24 +1,26 @@
-import react from 'react';
-import galleryItem from '../GalleryItem/GalleryItem';
+import React from 'react';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 
-function GalleryList (props){
-    const imageArray = props.galleryItems;
-
+function GalleryList ({photoGalleryItems}){
 
     
-    console.log(`What is galleryItems doing`, props);
+    // console.log(`What is galleryList doing`, photoGalleryItems);
 
     
     return(
     <>
-        <div className="galleryItem">
-            <p>Testing from Gallery List</p>
-            {props.galleryPhotos.map(image =>
-            <GalleryItem key={image.id} image={image}/>)
-            }
-        </div>
+    <div className="galleryList">
+        <p>Testing from Gallery List</p>   
+        {photoGalleryItems.map(image =>
+        {return (
+        <GalleryItem 
+            key={image.id} 
+            image={image} 
+             />)})
+        }
+    </div>
     </>
     )
 }
@@ -26,3 +28,4 @@ function GalleryList (props){
 export default GalleryList;
 
 
+// updateLikes={photoGalleryItems.updateLikes}

@@ -1,4 +1,4 @@
-//this is where we get the individual items via props
+//this is where we get the individual items via image
 
 
 //create a conditional rendering when clicking on
@@ -6,19 +6,29 @@
 //Try boolean
 import react from 'react';
 import {useState} from 'react';
+import './GalleryItem.css'
 
+function GalleryItem ({image}){
+    const [display, setDisplay] = useState(true);
+    console.log(`What is GalleryItem doing`, image);
 
-function GalleryItem (prop){
-    const imageArray = prop.GalleryItem;
+    const toggleDisplay = () => {
+    console.log('Image has been clicked');
+    //set state
+    setDisplay(!display)
+    }
+    // const updateLikes
 
-    console.log(`What is imageArray doing?`, imageArray);
-    console.log(`What is GalleryItem doing`, prop);
-
-
-
-    return(
-        //moved code over to GalleryList. Originally thought the data was supposed
-        //to be passed through here to display.
+    return (
+        <>
+        <section onClick={() => toggleDisplay(image.id)}  className="galleryItem">
+            { display &&
+            <img className="photoItem" src={image.path} alt={image.description}/>}
+            { !display &&
+            <p>{image.description}</p>}
+        {/* <button type='button' onClick={() => updateLikes(image.id)}>Likes {image.likes}</button> */}
+        </section>
+        </>
     )
 }
 

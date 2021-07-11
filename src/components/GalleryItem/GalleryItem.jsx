@@ -16,21 +16,10 @@ function GalleryItem (prop){
 
 
 
-return (
-    <div className="galleryItem">
-        <p>Testing from Gallery List</p>
-        {/* {imageArray.map((imageInfo) => {
-            return(
-            <div>
-                <h1>{imageInfo.path}</h1>
-                <span>{imageInfo.description}</span>
-                <span>{imageInfo.likes}</span>
-            </div>
-            );
-        })} */}
-            
-    </div>  
-)
+    return(
+        //moved code over to GalleryList. Originally thought the data was supposed
+        //to be passed through here to display.
+    )
 }
 
 export default GalleryItem;

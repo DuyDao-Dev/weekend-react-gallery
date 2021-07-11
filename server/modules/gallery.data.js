@@ -7,25 +7,25 @@ const galleryItems = [
     likes: 0,
   },
   {
-    id: 1,
+    id: 2,
     path: "images/chefbreakfast.jpg",
     description: "This is your typical breakfast in Italy. Espresso, lemon cream filled croissant, orange juice, and a smoke.",
     likes: 0,
   },
   {
-    id: 1,
+    id: 3,
     path: "images/dessert.jpg",
     description: "Deconstructed smores I had at Red Wagon Pizza in Minneapolis.",
     likes: 0,
   },
   {
-    id: 1,
+    id: 4,
     path: "images/luckyoven.jpg",
     description: "The day my daughter Zoey visited me at work at Lucky Oven Bakery.",
     likes: 0,
   },
   {
-    id: 1,
+    id: 5,
     path: "images/tartare.jpg",
     description: "Made the staff some steak tartare with delicious scraps after making steaks.",
     likes: 0,
@@ -33,3 +33,5 @@ const galleryItems = [
 ];
 
 module.exports = galleryItems;
+
+//export default galleryItems;

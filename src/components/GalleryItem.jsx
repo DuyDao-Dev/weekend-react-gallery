@@ -11,7 +11,7 @@ import {useState} from 'react';
 function GalleryItem (prop){
     const imageArray = prop.GalleryItem;
 
-    
+    console.log(`What is imageArray doing?`, imageArray);
     console.log(`What is GalleryItem doing`, prop);
 
 
@@ -19,17 +19,12 @@ function GalleryItem (prop){
 return (
     <div className="galleryItem">
         <p>Testing from Gallery List</p>
-        { imageArray.length > 0 &&
-        imageArray.map(image =>(
-        <GalleryItem 
-            key={
-                image.id, 
-                image.path, 
-                image.description, 
-                image.likes}
-            />)
-        )}
-    </div>    
+        {prop.length > 0 && 
+        {imageArray.map((image) => (
+        <div key={prop.image.id}>{image}</div>
+        ))}
+        }
+    </div>  
 )
 }
 
@@ -42,3 +37,12 @@ export default GalleryItem;
         //         image.path, 
         //         image.description, 
         //         image.likes}
+
+
+
+
+    //     <div className="users">
+    //   {data.map((user) => (
+    //     <div className="user">{user}</div>
+    //   ))}
+    // </div>

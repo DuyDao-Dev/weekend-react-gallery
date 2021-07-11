@@ -19,11 +19,16 @@ function GalleryItem (prop){
 return (
     <div className="galleryItem">
         <p>Testing from Gallery List</p>
-        {prop.length > 0 && 
-        {imageArray.map((image) => (
-        <div key={prop.image.id}>{image}</div>
-        ))}
-        }
+        {/* {imageArray.map((imageInfo) => {
+            return(
+            <div>
+                <h1>{imageInfo.path}</h1>
+                <span>{imageInfo.description}</span>
+                <span>{imageInfo.likes}</span>
+            </div>
+            );
+        })} */}
+            
     </div>  
 )
 }
